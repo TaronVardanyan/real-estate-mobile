@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { Stack } from "expo-router";
 import { useFonts } from "expo-font";
-import { SafeAreaProvider } from "react-native-safe-area-context";
+import GlobalProvider from "@/lib/global-provider";
 import * as SplashScreen from "expo-splash-screen";
 import "./global.css";
 
@@ -25,7 +25,9 @@ export default function RootLayout() {
     return null;
   }
 
-  return <SafeAreaProvider>
-    <Stack screenOptions={{ headerShown: false }} />
-  </SafeAreaProvider>;
+  return (
+    <GlobalProvider>
+      <Stack screenOptions={{ headerShown: false }} />
+    </GlobalProvider>
+  );
 }
