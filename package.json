@@ -40,7 +40,8 @@
     "react-native-url-polyfill": "^2.0.0",
     "react-native-web": "~0.21.0",
     "react-native-worklets": "0.5.1",
-    "tailwindcss": "^3.4.17"
+    "tailwindcss": "^3.4.17",
+    "use-debounce": "^10.0.6"
   },
   "devDependencies": {
     "@types/react": "~19.1.0",
