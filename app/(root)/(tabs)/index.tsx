@@ -5,10 +5,12 @@ import {
   Text,
   TouchableOpacity,
   View,
+  Button,
 } from "react-native";
 import { useEffect } from "react";
 import { router, useLocalSearchParams } from "expo-router";
 import { SafeAreaView } from "react-native-safe-area-context";
+import seed from "@/lib/seed";
 
 import icons from "@/constants/icons";
 
@@ -57,6 +59,7 @@ const Home = () => {
 
   return (
     <SafeAreaView className="h-full bg-white">
+      <Button title="seed" onPress={seed} />
       <FlatList
         data={properties}
         numColumns={2}
